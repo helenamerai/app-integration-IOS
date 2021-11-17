@@ -42,73 +42,73 @@
   <script>
     console.log("Hello world!");
     // function onCreateOrder() {
-      let fname = document.getElementById("fname").value;
+//       let fname = document.getElementById("fname").value;
 
-      let dataSend = {
-        'merchantId': 'M100002380',
-        'curType': 'RM',
-        'notifyURL': 'http://helena95.heliohost.us/PHP/notifyspay.php',
-        'merOrderNo': 'APP202211107-00020',
-        'orderAmt': 'orderAmt',
-        'goodsName': '',
-        'transactionType': '1',
-        'remark': 'App integration test'
-      }
+//       let dataSend = {
+//         'merchantId': 'M100002380',
+//         'curType': 'RM',
+//         'notifyURL': 'http://helena95.heliohost.us/PHP/notifyspay.php',
+//         'merOrderNo': 'APP202211107-00020',
+//         'orderAmt': 'orderAmt',
+//         'goodsName': '',
+//         'transactionType': '1',
+//         'remark': 'App integration test'
+//       }
 
-      console.log('data:', dataSend);
+//       console.log('data:', dataSend);
 
-      // jQuery(function ($) {
-      // $.ajax({
-      //   type: 'POST',
-      //   url: 'https://spfintech.sains.com.my/xservice/H5PaymentAction.preOrder.do',
-      //   data: dataSend,
-      //   success: function (data) {
-      //     console.log('success', data);
-      //   }
-      // });
+//       // jQuery(function ($) {
+//       // $.ajax({
+//       //   type: 'POST',
+//       //   url: 'https://spfintech.sains.com.my/xservice/H5PaymentAction.preOrder.do',
+//       //   data: dataSend,
+//       //   success: function (data) {
+//       //     console.log('success', data);
+//       //   }
+//       // });
 
-      $.ajax({
-  method: "POST",
-  url: "/plugins/create-order.php",
-  data: {}
+//       $.ajax({
+//   method: "POST",
+//   url: "/plugins/create-order.php",
+//   data: {}
 
-})
-  .done(function( response ) {
-    console.log('suceeesss');
-  });
+// })
+//   .done(function( response ) {
+//     console.log('suceeesss');
+//   });
   
 
-// }
+// // }
 
-function ajaxcall () {
-  // (B1) GET FORM DATA
-  var data = new FormData(document.getElementById("myForm"));
+// function ajaxcall () {
+//   // (B1) GET FORM DATA
+//   var data = new FormData(document.getElementById("myForm"));
  
-  // (B2) AJAX CALL
-  // var xhr = new XMLHttpRequest();
-  // xhr.open("POST", "/plugins/create-order.php");
-  // xhr.setRequestHeader('Content-type', 'application/json');
-  // xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-  // xhr.setRequestHeader('Access-Control-Allow-Methods', GET, POST, PUT);
-  // xhr.setRequestHeader('Access-Control-Allow-Headers', X-Custom-Header);
+//   // (B2) AJAX CALL
+//   // var xhr = new XMLHttpRequest();
+//   // xhr.open("POST", "/plugins/create-order.php");
+//   // xhr.setRequestHeader('Content-type', 'application/json');
+//   // xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+//   // xhr.setRequestHeader('Access-Control-Allow-Methods', GET, POST, PUT);
+//   // xhr.setRequestHeader('Access-Control-Allow-Headers', X-Custom-Header);
 
 
 
-  // xhr.send(JSON.stringify(data));
-  // xhr.onload = function () {
-  //   console.log(this.response);
-  // };
-  // xhr.send(data);
-  // return false;
+//   // xhr.send(JSON.stringify(data));
+//   // xhr.onload = function () {
+//   //   console.log(this.response);
+//   // };
+//   // xhr.send(data);
+//   // return false;
 
-    // (B2) FETCH
-    fetch("/plugins/create-order.php", { method: "POST", body: data })
-  .then(res => res.text())
-  .then((txt) => {
-    console.log(txt);
-  })
-  .catch((err) => { console.error(err); });
-  return false;
+//     // (B2) FETCH
+//     fetch("/plugins/create-order.php", { method: "POST", body: data })
+//   .then(res => res.text())
+//   .then((txt) => {
+//     console.log(txt);
+//   })
+//   .catch((err) => { console.error(err); });
+//   return false;
 
 
 }
