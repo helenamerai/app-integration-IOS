@@ -1,8 +1,13 @@
-window.onload = () => {
-  'use strict';
 
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-             .register('./sw.js');
+
+
+function validateForm() {
+  let x = document.forms["createOrder"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
   }
+  console.log('xxx:', x);
+  console.log("Hello world!");
+
 }
